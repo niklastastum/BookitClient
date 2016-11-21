@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="css/Style.css">
+    <link rel="stylesheet" href="lib/css/bootstrap.css">
+
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Bookit </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Forside <span class="sr-only">(current)</span></a></li>
+                <li><a href="Books.html">Bøger </a></li>
+                <li><a href="Curriculum.html">Pensumliste </a></li>
+                <li class="active"><a href="User.html">Kriterier </a></li>
+
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="Login.html">Login</a></li>
+
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<!--<div class="container">-->
+<!--<div id="options">-->
+
+
+<!--<button class="pushButton" id="userCurriculum">Fortsæt til din pensumliste</button>-->
+<!--</div>-->
+<!--</div>-->
+
+<div id="clouds">
+    <div class="cloud x1"></div>
+    <!-- Time for multiple clouds to dance around -->
+    <div class="cloud x2"></div>
+    <div class="cloud x3"></div>
+    <div class="cloud x4"></div>
+    <div class="cloud x5"></div>
+</div>
+
+
+<div class="container">
+
+    <div id="options">
+
+        <h1 id="overskrift">Vælg Skole, Uddannelse og Semester</h1>
+
+        <form method="post">
+
+            <select>
+                <option value="" disabled selected>Vælg skole</option>
+                <option value="opt1">CBS</option>
+            </select>
+
+            <br><br>
+
+            <select>
+                    
+                <option value="" disabled selected style="display: none;">Vælg uddannelse</option>
+                    
+                <option id="haIt" value="opt1">HA(it)</option>
+                    
+                <option id="haMat" value="opt2">HA(nørd)</option>
+            </select>
+
+            <br><br>
+
+            <select>
+                    
+                <option value="" disabled selected style="display: none;">Vælg semester</option>
+                    
+                <option value="opt1">1</option>
+                    
+                <option value="opt2">3</option>
+                    
+                <option value="opt2">5</option>
+            </select>
+
+            <br><br>
+
+            <button class="pushButton" id="CurriculumBtn">Se din Pensumliste</button>
+
+        </form>
+
+    </div>
+</div>
+
+<script type="text/javascript" src="lib/js/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="js/User.page.js"></script>
+<script type="text/javascript" src="lib/js/bootstrap.js"></script>
+
+
+</body>
+</html>
