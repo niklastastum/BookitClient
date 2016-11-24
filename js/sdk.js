@@ -9,12 +9,12 @@ var SDK = {
 
         // Take care of headers
 
-        var headers = {};
-        if (options.headers) {
-            Object.keys(options.headers).forEach(function (h) {
-                headers[h] = (typeof options.headers[h] === 'object') ? JSON.stringify(options.headers[h]) : options.headers[h];
-            });
-        }
+        // var headers = {};
+        // if (options.headers) {
+        //     Object.keys(options.headers).forEach(function (h) {
+        //         headers[h] = (typeof options.headers[h] === 'object') ? JSON.stringify(options.headers[h]) : options.headers[h];
+        //     });
+        // }
 
         // var headers = {
         //     'Access-Control-Allow-Origin' : 'http://localhost:8080/api/user',
@@ -56,7 +56,6 @@ var SDK = {
             },
             error: function (xhr, status, errorThrown) {
                 alert("Error on ajax");
-                alert(errorThrown);
                 cb({xhr: xhr, status: status, error: errorThrown});
             }
         });
@@ -75,7 +74,7 @@ var SDK = {
         },
         current: function () {
             return SDK.Storage.load("user");
-            alert(SDK.Storage.persist("tokenId", data.id));
+            alert(SDK.Storage.persist("token", data.token));
         }
     },
 
@@ -119,9 +118,10 @@ var SDK = {
             //On login-error
             if (err) return cb(err);
 
-            SDK.Storage.persist("tokenId", data.id);
-            SDK.Storage.persist("userId", data.userId);
+            SDK.Storage.persist("token", data.token);
             SDK.Storage.persist("user", data.user);
+            // SDK.Storage.persist("userId", data.userId);
+            // SDK.Storage.persist("user", data.user);
 
             cb(null, data);
 

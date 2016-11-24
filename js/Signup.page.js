@@ -12,13 +12,20 @@ $(document).ready(function () {
           userType: true
         };
 
-        SDK.User.create(user, function (err, data) {
-            if(err) {
-                alert("Går det galt her?");
-                throw err;
-            }
-        })
+        // if (user.firstName === null || user.lastName === null || user.userName === null) {
+        if (user.firstName === "" || user.lastName === "" || user.userName === "" || user.email === "" || user.password === "") {
 
+            alert('Indtast venligst alle oplysninger');
 
+        } else {
+
+            SDK.User.create(user, function (err, data) {
+                if (err) {
+                    alert("Går det galt her?");
+                    throw err;
+                }
+            })
+
+        }
     });
 });
