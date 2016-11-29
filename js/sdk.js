@@ -72,7 +72,6 @@ var SDK = {
             SDK.request({method: "POST", url: "/user", data: data}, cb);
         },
         current: function () {
-            // return SDK.Storage.load("user");
             return localStorage.getItem("user");
         }
     },
@@ -105,9 +104,6 @@ var SDK = {
         };
         SDK.request({method: "POST", url: "/user/logout", data: token}, cb);
 
-        // SDK.Storage.remove("token");
-        // SDK.Storage.remove("user");
-
         localStorage.removeItem("token");
         localStorage.removeItem("user")
 
@@ -130,32 +126,10 @@ var SDK = {
             localStorage.setItem("token", data.token);
             localStorage.setItem("user", JSON.stringify(data.user));
 
-            // SDK.Storage.persist("token", data.token);
-            // SDK.Storage.persist("user", data.user);
-
             cb(null, data);
 
         });
     },
-
-    // Storage: {
-    //     prefix: "BookStoreSDK",
-    //     persist: function (key, value) {
-    //         window.localStorage.setItem(this.prefix + key, (typeof value === 'object') ? JSON.stringify(value) : value)
-    //     },
-    //     load: function (key) {
-    //         var val = window.localStorage.getItem(this.prefix + key);
-    //         try {
-    //             return JSON.parse(val);
-    //         }
-    //         catch (e) {
-    //             return val;
-    //         }
-    //     },
-    //     remove: function (key) {
-    //         window.localStorage.removeItem(this.prefix + key);
-    //     }
-    // }
 
 };
 

@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="949fe182-19b2-4b99-bb12-e8a4a896234d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/User.html" afterPath="$PROJECT_DIR$/User.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Login.page.js" afterPath="$PROJECT_DIR$/js/Login.page.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/sdk.js" afterPath="$PROJECT_DIR$/js/sdk.js" />
     </list>
     <ignored path="Bookit.iws" />
@@ -28,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="sdk.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="sdk.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/sdk.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+            <state relative-caret-position="433">
+              <caret line="135" column="32" selection-start-line="135" selection-start-column="32" selection-end-line="135" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -48,7 +46,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Login.page.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Login.page.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/Login.page.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="405">
@@ -150,8 +148,8 @@
         <option value="$PROJECT_DIR$/Curriculum.html" />
         <option value="$PROJECT_DIR$/User.html" />
         <option value="$PROJECT_DIR$/EditUser.html" />
-        <option value="$PROJECT_DIR$/js/sdk.js" />
         <option value="$PROJECT_DIR$/js/Login.page.js" />
+        <option value="$PROJECT_DIR$/js/sdk.js" />
       </list>
     </option>
   </component>
@@ -386,7 +384,7 @@
       <workItem from="1479676790042" duration="8897000" />
       <workItem from="1479746047575" duration="2842000" />
       <workItem from="1479987658710" duration="5052000" />
-      <workItem from="1480410123759" duration="8008000" />
+      <workItem from="1480410123759" duration="8592000" />
     </task>
     <task id="LOCAL-00001" summary="Nu er index.html slettet, da jeg laver login-siden til foerste side.">
       <created>1480413750345</created>
@@ -409,11 +407,18 @@
       <option name="project" value="LOCAL" />
       <updated>1480414708183</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Har ændret storage fra Jespers Storage metode til at bruge den indbyggede localStorage. Det virker nu. Logud POST metode er ogsaa opdateret. Den sletter altsaa baade token paa klient og database ved logud.&#10;">
+      <created>1480424727035</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1480424727035</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90900000" />
+    <option name="totallyTimeSpent" value="91484000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="725" extended-state="6" />
@@ -452,7 +457,8 @@
     <MESSAGE value="Nu er index.html slettet, da jeg laver login-siden til foerste side." />
     <MESSAGE value="small changes&#10;" />
     <MESSAGE value="Nu er logud knappen sat op. Mangler dog metode&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Nu er logud knappen sat op. Mangler dog metode&#10;" />
+    <MESSAGE value="Har ændret storage fra Jespers Storage metode til at bruge den indbyggede localStorage. Det virker nu. Logud POST metode er ogsaa opdateret. Den sletter altsaa baade token paa klient og database ved logud.&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Har ændret storage fra Jespers Storage metode til at bruge den indbyggede localStorage. Det virker nu. Logud POST metode er ogsaa opdateret. Den sletter altsaa baade token paa klient og database ved logud.&#10;" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -812,14 +818,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/sdk.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/User.page.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -832,6 +830,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/sdk.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="135" column="32" selection-start-line="135" selection-start-column="32" selection-end-line="135" selection-end-column="32" />
           <folding />
         </state>
       </provider>
