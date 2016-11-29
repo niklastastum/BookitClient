@@ -12,7 +12,6 @@ $(document).ready(function () {
           userType: true
         };
 
-        // if (user.firstName === null || user.lastName === null || user.userName === null) {
         if (user.firstName === "" || user.lastName === "" || user.userName === "" || user.email === "" || user.password === "") {
 
             alert('Indtast venligst alle oplysninger');

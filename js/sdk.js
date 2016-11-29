@@ -72,7 +72,14 @@ var SDK = {
             SDK.request({method: "POST", url: "/user", data: data}, cb);
         },
         current: function () {
-            return localStorage.getItem("user");
+            var currentUser = JSON.parse(localStorage.getItem("user"));
+            return currentUser;
+        },
+        edit: function (data, cb) {
+
+            var userID = JSON.parse(localStorage.getItem("user")).userID;
+
+            SDK.request({method: "PUT", url: "/user/" + userID, data: data}, cb);
         }
     },
 
@@ -106,8 +113,6 @@ var SDK = {
 
         localStorage.removeItem("token");
         localStorage.removeItem("user")
-
-
     },
 
     login: function (username, password, cb) {
@@ -142,6 +147,6 @@ function encryptDecrypt(input) {
     return out;
 }
 
-$("#logoutClick").on("click", function() {
+$("#logoutClick").on("click", function () {
     SDK.logOut();
 });

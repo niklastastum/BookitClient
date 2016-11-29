@@ -71,23 +71,19 @@
 
                 <div class="signup">
 
-                    <p><p></p><input type="text" placeholder="Fornavn" id="firstName"></p>
-                    <p><input type="text" placeholder="Efternavn" id="lastName"></p>
-                    <p><input type="text" placeholder="Brugernavn" id="username"></p>
-                    <p><input type="text" placeholder="E-mail" id="email"></p>
-                    <p><input type="password"  placeholder="Adgangskode" id="password"></p>
+                    <p id="oldFirstname"><input type="text" placeholder="Fornavn" id="firstName"></p>
+                    <p id="oldLastname"><input type="text" placeholder="Efternavn" id="lastName"></p>
+                    <p id="oldUsername"><input type="text" placeholder="Brugernavn" id="username"></p>
+                    <p id="oldEmail"><input type="text" placeholder="E-mail" id="email"></p>
+                    <p id="oldPassword">********<input type="password"  placeholder="Adgangskode" id="password"></p>
 
-                    <!--<p><input type="submit" value="Opret Bruger" id="submit_button"></p>-->
-
-                    <button class="pushButton" id="createUserButton">Opret Bruger</button>
+                    <button class="pushButton" id="editUserButton">Foretag ændringer</button>
 
                 </div>
 
             </fieldset>
 
         </form>
-
-        <p>Har du allerede en bruger? <a href="Login.html" class="blue">Login</a><span class="fontawesome-arrow-right"></span></p>
 
     </div> <!-- end login -->
 
@@ -97,7 +93,7 @@
 
 <script type="text/javascript" src="lib/js/jquery-3.1.1.js"></script>
 <script type="text/javascript" src="js/sdk.js"></script>
-<script type="text/javascript" src="js/Signup.page.js"></script>
+<script type="text/javascript" src="js/EditUser.page.js"></script>
 <script type="text/javascript" src="lib/js/bootstrap.js"></script>
 
 </body>
