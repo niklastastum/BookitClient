@@ -11,11 +11,7 @@ $(document).ready(function() {
 
     // $('#bs-example-navbar-collapse-1 ul').append('<li id="currentUser"><a>' + currentUser.firstName + '</a></li>');
 
-    $jumbotron.append("<h1>" + currentUser.firstName + "</h1>");
-
-    console.log(currentUser.firstName);
-    console.log("test");
-
+    $jumbotron.append("<h1>" + currentUser.firstName + " " + currentUser.lastName + "</h1>");
 
     // var $booksTableBody = $('#booksTableBody');
     // books.forEach(function (book, i) {

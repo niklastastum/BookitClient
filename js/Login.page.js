@@ -19,6 +19,7 @@ $(document).ready(function () {
             }
 
             //Login OK!
+            // alert(currentUser.firstName);
             window.location.href = "User.html";
 
         });

@@ -74,7 +74,6 @@ var SDK = {
         },
         current: function () {
             return SDK.Storage.load("user");
-            alert(SDK.Storage.persist("token", data.token));
         }
     },
 
@@ -100,8 +99,7 @@ var SDK = {
     },
 
     logOut: function () {
-        SDK.Storage.remove("tokenId");
-        SDK.Storage.remove("userId");
+        SDK.Storage.remove("token");
         SDK.Storage.remove("user");
     },
 
@@ -120,8 +118,6 @@ var SDK = {
 
             SDK.Storage.persist("token", data.token);
             SDK.Storage.persist("user", data.user);
-            // SDK.Storage.persist("userId", data.userId);
-            // SDK.Storage.persist("user", data.user);
 
             cb(null, data);
 
