@@ -153,3 +153,7 @@ function encryptDecrypt(input) {
     }
     return out;
 }
+
+$("#logoutClick").on("click", function() {
+   alert('pf');
+});
