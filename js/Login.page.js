@@ -9,7 +9,9 @@ $(document).ready(function () {
         var un = $("#inputUsername").val();
         var pw = $("#inputPassword").val();
 
-        var currentUser = SDK.User.current();
+        // var currentUser = SDK.User.current();
+        // var currentUser = localStorage.getItem("user");
+        var currentUser = JSON.parse(localStorage.getItem("user"));
 
         SDK.login(un, pw, function (err, data) {
 
@@ -19,7 +21,7 @@ $(document).ready(function () {
             }
 
             //Login OK!
-            // alert(currentUser.firstName);
+            alert(currentUser.firstName);
             window.location.href = "User.html";
 
         });

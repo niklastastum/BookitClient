@@ -70,10 +70,10 @@ var SDK = {
     User: {
         create: function (data, cb) {
             SDK.request({method: "POST", url: "/user", data: data}, cb);
-            alert(JSON.stringify(data));
         },
         current: function () {
-            return SDK.Storage.load("user");
+            // return SDK.Storage.load("user");
+            return localStorage.getItem("user");
         }
     },
 
@@ -95,12 +95,23 @@ var SDK = {
         },
         getSix: function (cb) {
             SDK.request({method: "GET", url: "/curriculum/6/books"}, cb);
-        },
+        }
     },
 
-    logOut: function () {
-        SDK.Storage.remove("token");
-        SDK.Storage.remove("user");
+    logOut: function (data, cb) {
+
+        var token = {
+            token: localStorage.getItem("token")
+        };
+        SDK.request({method: "POST", url: "/user/logout", data: token}, cb);
+
+        // SDK.Storage.remove("token");
+        // SDK.Storage.remove("user");
+
+        localStorage.removeItem("token");
+        localStorage.removeItem("user")
+
+
     },
 
     login: function (username, password, cb) {
@@ -116,32 +127,35 @@ var SDK = {
             //On login-error
             if (err) return cb(err);
 
-            SDK.Storage.persist("token", data.token);
-            SDK.Storage.persist("user", data.user);
+            localStorage.setItem("token", data.token);
+            localStorage.setItem("user", JSON.stringify(data.user));
+
+            // SDK.Storage.persist("token", data.token);
+            // SDK.Storage.persist("user", data.user);
 
             cb(null, data);
 
         });
     },
 
-    Storage: {
-        prefix: "BookStoreSDK",
-        persist: function (key, value) {
-            window.localStorage.setItem(this.prefix + key, (typeof value === 'object') ? JSON.stringify(value) : value)
-        },
-        load: function (key) {
-            var val = window.localStorage.getItem(this.prefix + key);
-            try {
-                return JSON.parse(val);
-            }
-            catch (e) {
-                return val;
-            }
-        },
-        remove: function (key) {
-            window.localStorage.removeItem(this.prefix + key);
-        }
-    }
+    // Storage: {
+    //     prefix: "BookStoreSDK",
+    //     persist: function (key, value) {
+    //         window.localStorage.setItem(this.prefix + key, (typeof value === 'object') ? JSON.stringify(value) : value)
+    //     },
+    //     load: function (key) {
+    //         var val = window.localStorage.getItem(this.prefix + key);
+    //         try {
+    //             return JSON.parse(val);
+    //         }
+    //         catch (e) {
+    //             return val;
+    //         }
+    //     },
+    //     remove: function (key) {
+    //         window.localStorage.removeItem(this.prefix + key);
+    //     }
+    // }
 
 };
 
@@ -155,5 +169,5 @@ function encryptDecrypt(input) {
 }
 
 $("#logoutClick").on("click", function() {
-   alert('pf');
+    SDK.logOut();
 });

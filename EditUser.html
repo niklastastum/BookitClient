@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
 
-    <link rel="stylesheet" href="css/Style.css">
     <link rel="stylesheet" href="lib/css/bootstrap.css">
-
+    <link rel="stylesheet" href="css/Style.css">
 
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+<body>
 
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
@@ -30,7 +30,7 @@
                 <li><a href="index.html">Forside <span class="sr-only">(current)</span></a></li>
                 <li><a href="Books.html">Bøger </a></li>
                 <li><a href="Curriculum.html">Pensumliste </a></li>
-                <li class="active"><a href="User.html">Kriterier </a></li>
+                <li><a href="User.html">Kriterier </a></li>
 
             </ul>
 
@@ -38,7 +38,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Indstillinger <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="EditUser.html">Opdater brugeroplysninger</a></li>
+                        <li class="active"><a href="EditUser.html">Opdater brugeroplysninger</a></li>
                     </ul>
                 </li>
                 <li>  </li>
@@ -47,6 +47,10 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
+
+
+<!-- UNDER DETTE PUNKT FINDES ALT IMPORTERET HTML KODE OMKRING LOGIN PAGE-->
+
 
 <div id="clouds">
     <div class="cloud x1"></div>
@@ -57,58 +61,44 @@
     <div class="cloud x5"></div>
 </div>
 
-
 <div class="container">
 
-    <div id="options">
-
-        <h1 id="overskrift">Vælg Skole, Uddannelse og Semester</h1>
+    <div id="login">
 
         <form method="post">
 
-            <select>
-                <option value="" disabled selected>Vælg skole</option>
-                <option value="opt1">CBS</option>
-            </select>
+            <fieldset class="clearfix">
 
-            <br><br>
+                <div class="signup">
 
-            <select>
-                    
-                <option value="" disabled selected style="display: none;">Vælg uddannelse</option>
-                    
-                <option id="haIt" value="opt1">HA(it)</option>
-                    
-                <option id="haMat" value="opt2">HA(nørd)</option>
-            </select>
+                    <p><p></p><input type="text" placeholder="Fornavn" id="firstName"></p>
+                    <p><input type="text" placeholder="Efternavn" id="lastName"></p>
+                    <p><input type="text" placeholder="Brugernavn" id="username"></p>
+                    <p><input type="text" placeholder="E-mail" id="email"></p>
+                    <p><input type="password"  placeholder="Adgangskode" id="password"></p>
 
-            <br><br>
+                    <!--<p><input type="submit" value="Opret Bruger" id="submit_button"></p>-->
 
-            <select>
-                    
-                <option value="" disabled selected style="display: none;">Vælg semester</option>
-                    
-                <option value="opt1">1</option>
-                    
-                <option value="opt2">3</option>
-                    
-                <option value="opt2">5</option>
-            </select>
+                    <button class="pushButton" id="createUserButton">Opret Bruger</button>
 
-            <br><br>
+                </div>
 
-            <button class="pushButton" id="CurriculumBtn">Se din Pensumliste</button>
+            </fieldset>
 
         </form>
 
-    </div>
+        <p>Har du allerede en bruger? <a href="Login.html" class="blue">Login</a><span class="fontawesome-arrow-right"></span></p>
+
+    </div> <!-- end login -->
+
 </div>
+
+<div class="footer"><h3>Copyright © 2016 All Rights Reserved - BookIt - Niklas Sachs Tastum</h3></div>
 
 <script type="text/javascript" src="lib/js/jquery-3.1.1.js"></script>
 <script type="text/javascript" src="js/sdk.js"></script>
-<script type="text/javascript" src="js/User.page.js"></script>
+<script type="text/javascript" src="js/Signup.page.js"></script>
 <script type="text/javascript" src="lib/js/bootstrap.js"></script>
-
 
 </body>
 </html>
