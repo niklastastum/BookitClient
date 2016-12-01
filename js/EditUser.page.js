@@ -28,9 +28,10 @@ $(document).ready(function() {
         };
 
         SDK.User.edit(user, function () {
-            if (err) {
-                throw err;
-            }
+            // if (err) {
+            //     throw err;
+            // }
+            alert("test");
         })
 
     });

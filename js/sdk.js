@@ -46,6 +46,10 @@ var SDK = {
 
         $.ajax({
             url: SDK.serverURL + options.url,
+            headers: {
+               "authorization":sessionStorage.getItem("token"),
+                // 'Access-Control-Allow-Methods' : 'POST, GET, OPTIONS, PUT'
+            },
             method: options.method,
             contentType: "application/json",
             dataType: "json",
@@ -56,6 +60,7 @@ var SDK = {
             },
             error: function (xhr, status, errorThrown) {
                 alert("Error on ajax");
+                console.log(errorThrown);
                 cb({xhr: xhr, status: status, error: errorThrown});
             }
         });
@@ -76,7 +81,7 @@ var SDK = {
             return currentUser;
         },
         edit: function (data, cb) {
-
+            debugger;
             var userID = JSON.parse(sessionStorage.getItem("user")).userID;
 
             SDK.request({method: "PUT", url: "/user/" + userID, data: data}, cb);
