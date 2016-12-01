@@ -11,7 +11,7 @@ $(document).ready(function () {
 
         // var currentUser = SDK.User.current();
         // var currentUser = localStorage.getItem("user");
-        var currentUser = JSON.parse(localStorage.getItem("user"));
+        var currentUser = JSON.parse(sessionStorage.getItem("user"));
 
         SDK.login(un, pw, function (err, data) {
 

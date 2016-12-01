@@ -72,12 +72,12 @@ var SDK = {
             SDK.request({method: "POST", url: "/user", data: data}, cb);
         },
         current: function () {
-            var currentUser = JSON.parse(localStorage.getItem("user"));
+            var currentUser = JSON.parse(sessionStorage.getItem("user"));
             return currentUser;
         },
         edit: function (data, cb) {
 
-            var userID = JSON.parse(localStorage.getItem("user")).userID;
+            var userID = JSON.parse(sessionStorage.getItem("user")).userID;
 
             SDK.request({method: "PUT", url: "/user/" + userID, data: data}, cb);
         }
@@ -107,12 +107,12 @@ var SDK = {
     logOut: function (data, cb) {
 
         var token = {
-            token: localStorage.getItem("token")
+            token: sessionStorage.getItem("token")
         };
         SDK.request({method: "POST", url: "/user/logout", data: token}, cb);
 
-        localStorage.removeItem("token");
-        localStorage.removeItem("user")
+        sessionStorage.removeItem("token");
+        sessionStorage.removeItem("user")
     },
 
     login: function (username, password, cb) {
@@ -128,8 +128,8 @@ var SDK = {
             //On login-error
             if (err) return cb(err);
 
-            localStorage.setItem("token", data.token);
-            localStorage.setItem("user", JSON.stringify(data.user));
+            sessionStorage.setItem("token", data.token);
+            sessionStorage.setItem("user", JSON.stringify(data.user));
 
             cb(null, data);
 
