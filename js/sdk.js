@@ -81,7 +81,7 @@ var SDK = {
             return currentUser;
         },
         edit: function (data, cb) {
-            debugger;
+
             var userID = JSON.parse(sessionStorage.getItem("user")).userID;
 
             SDK.request({method: "PUT", url: "/user/" + userID, data: data}, cb);

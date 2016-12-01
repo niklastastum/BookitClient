@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="949fe182-19b2-4b99-bb12-e8a4a896234d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/EditUser.page.js" afterPath="$PROJECT_DIR$/js/EditUser.page.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EditUser.html" afterPath="$PROJECT_DIR$/EditUser.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/Style.css" afterPath="$PROJECT_DIR$/css/Style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/sdk.js" afterPath="$PROJECT_DIR$/js/sdk.js" />
     </list>
     <ignored path="Bookit.iws" />
@@ -27,11 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="sdk.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sdk.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/sdk.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="51" column="14" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
+            <state relative-caret-position="315">
+              <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
               <folding>
                 <element signature="e#777#1000#0" expanded="false" />
               </folding>
@@ -42,18 +43,18 @@
       <file leaf-file-name="EditUser.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/EditUser.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="79" column="84" selection-start-line="79" selection-start-column="84" selection-end-line="79" selection-end-column="84" />
+            <state relative-caret-position="326">
+              <caret line="81" column="50" selection-start-line="81" selection-start-column="50" selection-end-line="81" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/Style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2250">
-              <caret line="150" column="1" selection-start-line="150" selection-start-column="1" selection-end-line="150" selection-end-column="1" />
+            <state relative-caret-position="259">
+              <caret line="162" column="17" selection-start-line="162" selection-start-column="17" selection-end-line="162" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -67,6 +68,26 @@
               <folding>
                 <element signature="e#0#43#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Signup.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Signup.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-150">
+              <caret line="25" column="51" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/User.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-495">
+              <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -91,7 +112,6 @@
         <option value="$PROJECT_DIR$/css/SignupStyle.css" />
         <option value="$PROJECT_DIR$/lib/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/css/Style.css" />
         <option value="$PROJECT_DIR$/js/Curriculum.page.js" />
         <option value="$PROJECT_DIR$/js/Books.page.js" />
         <option value="$PROJECT_DIR$/js/User.page.js" />
@@ -101,11 +121,12 @@
         <option value="$PROJECT_DIR$/Books.html" />
         <option value="$PROJECT_DIR$/Curriculum.html" />
         <option value="$PROJECT_DIR$/User.html" />
-        <option value="$PROJECT_DIR$/EditUser.html" />
         <option value="$PROJECT_DIR$/js/Signup.page.js" />
         <option value="$PROJECT_DIR$/js/Login.page.js" />
         <option value="$PROJECT_DIR$/js/EditUser.page.js" />
         <option value="$PROJECT_DIR$/js/sdk.js" />
+        <option value="$PROJECT_DIR$/EditUser.html" />
+        <option value="$PROJECT_DIR$/css/Style.css" />
       </list>
     </option>
   </component>
@@ -341,7 +362,7 @@
       <workItem from="1479746047575" duration="2842000" />
       <workItem from="1479987658710" duration="5052000" />
       <workItem from="1480410123759" duration="15761000" />
-      <workItem from="1480593137572" duration="2779000" />
+      <workItem from="1480593137572" duration="4897000" />
     </task>
     <task id="LOCAL-00001" summary="Nu er index.html slettet, da jeg laver login-siden til foerste side.">
       <created>1480413750345</created>
@@ -392,14 +413,21 @@
       <option name="project" value="LOCAL" />
       <updated>1480593924508</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="EditUser virker">
+      <created>1480596893203</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1480596893203</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101432000" />
+    <option name="totallyTimeSpent" value="103550000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1280" height="725" extended-state="6" />
+    <frame x="0" y="22" width="1280" height="725" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1890625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -438,7 +466,8 @@
     <MESSAGE value="small changes&#10;" />
     <MESSAGE value="User.edit almost done. I still need to figure out how to handle errors from the user. SDK method is done except for including a token in the header with the PUT request.&#10;" />
     <MESSAGE value="Changed from localStorage to sessionStorage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed from localStorage to sessionStorage" />
+    <MESSAGE value="EditUser virker" />
+    <option name="LAST_COMMIT_MESSAGE" value="EditUser virker" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -671,14 +700,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Signup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="32" selection-start-line="0" selection-start-column="0" selection-end-line="84" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -687,25 +708,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/User.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1095">
           <caret line="73" column="56" selection-start-line="73" selection-start-column="56" selection-end-line="73" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/Style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2250">
-          <caret line="150" column="1" selection-start-line="150" selection-start-column="1" selection-end-line="150" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -762,14 +768,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EditUser.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="79" column="84" selection-start-line="79" selection-start-column="84" selection-end-line="79" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/EditUser.page.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -780,13 +778,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-150">
+          <caret line="25" column="51" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/User.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-495">
+          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/sdk.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="51" column="14" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
+        <state relative-caret-position="315">
+          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
           <folding>
             <element signature="e#777#1000#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EditUser.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="81" column="50" selection-start-line="81" selection-start-column="50" selection-end-line="81" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/Style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="162" column="17" selection-start-line="162" selection-start-column="17" selection-end-line="162" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
