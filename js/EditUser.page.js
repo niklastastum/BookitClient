@@ -31,8 +31,16 @@ $(document).ready(function() {
             // if (err) {
             //     throw err;
             // }
-            alert("test");
+            alert("Din bruger blev ændret");
         })
+
+    });
+
+    $('#deleteUserButton').on("click", function() {
+        SDK.User.delete(function() {
+            if (err) throw err;
+            alert("din bruger blev slettet");
+        });
 
     });
 

@@ -9,7 +9,7 @@ $(document).ready(function () {
           userName: $('#username').val(),
           email: $('#email').val(),
           password: $('#password').val(),
-          userType: true
+          userType: false
         };
 
         if (user.firstName === "" || user.lastName === "" || user.userName === "" || user.email === "" || user.password === "") {
@@ -20,9 +20,9 @@ $(document).ready(function () {
 
             SDK.User.create(user, function (err, data) {
                 if (err) {
-                    alert("Går det galt her?");
-                    throw err;
+                    return "fejl";
                 }
+                window.location.href = "User.html";
             })
 
         }

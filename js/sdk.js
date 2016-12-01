@@ -48,7 +48,6 @@ var SDK = {
             url: SDK.serverURL + options.url,
             headers: {
                "authorization":sessionStorage.getItem("token"),
-                // 'Access-Control-Allow-Methods' : 'POST, GET, OPTIONS, PUT'
             },
             method: options.method,
             contentType: "application/json",
@@ -60,7 +59,6 @@ var SDK = {
             },
             error: function (xhr, status, errorThrown) {
                 alert("Error on ajax");
-                console.log(errorThrown);
                 cb({xhr: xhr, status: status, error: errorThrown});
             }
         });
@@ -85,6 +83,11 @@ var SDK = {
             var userID = JSON.parse(sessionStorage.getItem("user")).userID;
 
             SDK.request({method: "PUT", url: "/user/" + userID, data: data}, cb);
+        },
+        delete: function (cb) {
+
+            var userID = JSON.parse(sessionStorage.getItem("user")).userID;
+            SDK.request({method: "DELETE", url: "/user/" + userID}, cb);
         }
     },
 
@@ -117,7 +120,7 @@ var SDK = {
         SDK.request({method: "POST", url: "/user/logout", data: token}, cb);
 
         sessionStorage.removeItem("token");
-        sessionStorage.removeItem("user")
+        sessionStorage.removeItem("user");
     },
 
     login: function (username, password, cb) {
@@ -153,5 +156,7 @@ function encryptDecrypt(input) {
 }
 
 $("#logoutClick").on("click", function () {
-    SDK.logOut();
+    if (err) throw err;
+            SDK.logOut();
+            window.location.href = "Login.html";
 });
