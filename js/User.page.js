@@ -25,14 +25,15 @@ $(document).ready(function () {
                 "</tr>");
         });
 
-        curriculumsTableRowHandler();
+        curriculumsTableHandler();
 
     });
 
-    function curriculumsTableRowHandler() {
+    function curriculumsTableHandler() {
         var $curriculumsTableRows = $("#curriculumsTableBody tr");
         $curriculumsTableRows.each(function() {
             $(this).on("click",function () {
+
                 SDK.Curriculum.getCurriculumBooks($(this).find(".curriculumID").html(), semesterBooks);
 
             });
@@ -46,12 +47,14 @@ $(document).ready(function () {
         //Da dataen kommer som en String, så skal det parses, så det kan læses.
         var books = JSON.parse(booksDecrypted);
 
-        $booksTableBody = $('#booksTableBody');
+        var $booksTableBody = $('#booksTableBody');
+
+        removeContent();
 
         books.forEach(function (book) {
 
             $booksTableBody.append(
-                "<tr>" +
+                "<tr id='test'>" +
                 "<td>" + book.title + "</td>" +
                 "<td>" + book.author + "</td>" +
                 "<td>" + book.publisher + "</td>" +
@@ -62,5 +65,9 @@ $(document).ready(function () {
                 "<td>" + book.priceCDON + "</td>" +
                 "</tr>");
         });
+    }
+
+    function removeContent() {
+        $('#booksTableBody').empty();
     }
 });
