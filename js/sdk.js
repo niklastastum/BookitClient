@@ -54,11 +54,11 @@ var SDK = {
             dataType: "json",
             data: JSON.stringify(options.data),
             success: function (data, status, xhr) {
-                alert("Success on ajax");
+                // alert("Success on ajax");
                 cb(null, data, status, xhr);
             },
             error: function (xhr, status, errorThrown) {
-                alert("Error on ajax");
+                // alert("Error on ajax");
                 cb({xhr: xhr, status: status, error: errorThrown});
             }
         });
@@ -95,23 +95,26 @@ var SDK = {
         getAll: function (cb){
             SDK.request({method: "GET", url: "/curriculum"}, cb);
         },
-        getOne: function (cb) {
-            SDK.request({method: "GET", url: "/curriculum/1/books"}, cb);
-        },
-        getTwo: function (cb) {
-            SDK.request({method: "GET", url: "/curriculum/2/books"}, cb);
-        },
-        getThree: function (cb) {
-            SDK.request({method: "GET", url: "/curriculum/3/books"}, cb);
-        },
-        getFour: function (cb) {
-            SDK.request({method: "GET", url: "/curriculum/4/books"}, cb);
-        },
-        getFive: function (cb) {
-            SDK.request({method: "GET", url: "/curriculum/5/books"}, cb);
-        },
-        getSix: function (cb) {
-            SDK.request({method: "GET", url: "/curriculum/6/books"}, cb);
+        // getOne: function (cb) {
+        //     SDK.request({method: "GET", url: "/curriculum/1/books"}, cb);
+        // },
+        // getTwo: function (cb) {
+        //     SDK.request({method: "GET", url: "/curriculum/2/books"}, cb);
+        // },
+        // getThree: function (cb) {
+        //     SDK.request({method: "GET", url: "/curriculum/3/books"}, cb);
+        // },
+        // getFour: function (cb) {
+        //     SDK.request({method: "GET", url: "/curriculum/4/books"}, cb);
+        // },
+        // getFive: function (cb) {
+        //     SDK.request({method: "GET", url: "/curriculum/5/books"}, cb);
+        // },
+        // getSix: function (cb) {
+        //     SDK.request({method: "GET", url: "/curriculum/6/books"}, cb);
+        // }
+        getCurriculumBooks: function(curriculumID, cb) {
+            SDK.request({method: "GET", url: "/curriculum/"+curriculumID+"/books"},cb);
         }
     },
 

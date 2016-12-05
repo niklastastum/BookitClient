@@ -12,18 +12,55 @@ $(document).ready(function () {
         //Da dataen kommer som en String, så skal det parses, så det kan læses.
         var curriculums = JSON.parse(decrypted);
 
-        var $curriculumTableBody = $('#curriculumTableBody');
+        var $curriculumsTableBody = $('#curriculumsTableBody');
 
-        curriculums.forEach(function (curriculum, i) {
+        curriculums.forEach(function (curriculum) {
 
-            $curriculumTableBody.append(
+            $curriculumsTableBody.append(
                 "<tr>" +
-                "<td>" + curriculum.curriculumID + "</td>" +
+                "<td class='hidden curriculumID'>" + curriculum.curriculumID + "</td>" +
                 "<td>" + curriculum.school + "</td>" +
                 "<td>" + curriculum.education + "</td>" +
                 "<td>" + curriculum.semester + "</td>" +
                 "</tr>");
         });
 
+        curriculumsTableRowHandler();
+
     });
+
+    function curriculumsTableRowHandler() {
+        var $curriculumsTableRows = $("#curriculumsTableBody tr");
+        $curriculumsTableRows.each(function() {
+            $(this).on("click",function () {
+                SDK.Curriculum.getCurriculumBooks($(this).find(".curriculumID").html(), semesterBooks);
+
+            });
+        });
+    }
+
+    function semesterBooks(test, data) {
+
+        var booksDecrypted = encryptDecrypt(data);
+
+        //Da dataen kommer som en String, så skal det parses, så det kan læses.
+        var books = JSON.parse(booksDecrypted);
+
+        $booksTableBody = $('#booksTableBody');
+
+        books.forEach(function (book) {
+
+            $booksTableBody.append(
+                "<tr>" +
+                "<td>" + book.title + "</td>" +
+                "<td>" + book.author + "</td>" +
+                "<td>" + book.publisher + "</td>" +
+                "<td>" + book.version + "</td>" +
+                "<td>" + book.ISBN + "</td>" +
+                "<td>" + book.priceAB + "</td>" +
+                "<td>" + book.priceSAXO + "</td>" +
+                "<td>" + book.priceCDON + "</td>" +
+                "</tr>");
+        });
+    }
 });
