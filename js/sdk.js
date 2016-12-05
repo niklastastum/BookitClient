@@ -92,6 +92,9 @@ var SDK = {
     },
 
     Curriculum: {
+        getAll: function (cb){
+            SDK.request({method: "GET", url: "/curriculum"}, cb);
+        },
         getOne: function (cb) {
             SDK.request({method: "GET", url: "/curriculum/1/books"}, cb);
         },

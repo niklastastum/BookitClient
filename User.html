@@ -2,9 +2,7 @@
 <html lang="en">
 <head>
 
-    <link rel="stylesheet" href="css/Style.css">
     <link rel="stylesheet" href="lib/css/bootstrap.css">
-
 
     <meta charset="UTF-8">
     <title>Title</title>
@@ -48,66 +46,85 @@
     </div><!-- /.container-fluid -->
 </nav>
 
-<div id="clouds">
-    <div class="cloud x1"></div>
-    <!-- Time for multiple clouds to dance around -->
-    <div class="cloud x2"></div>
-    <div class="cloud x3"></div>
-    <div class="cloud x4"></div>
-    <div class="cloud x5"></div>
-</div>
-
-
 <div class="container">
-
-    <div id="options">
-
-        <h1 id="overskrift">Vælg Skole, Uddannelse og Semester</h1>
-
-        <form method="post">
-
-            <select>
-                <option value="" disabled selected>Vælg skole</option>
-                <option value="opt1">CBS</option>
-            </select>
-
-            <br><br>
-
-            <select>
-                    
-                <option value="" disabled selected style="display: none;">Vælg uddannelse</option>
-                    
-                <option id="haIt" value="opt1">HA(it)</option>
-                    
-                <option id="haMat" value="opt2">HA(nørd)</option>
-            </select>
-
-            <br><br>
-
-            <select>
-                    
-                <option value="" disabled selected style="display: none;">Vælg semester</option>
-                    
-                <option value="opt1">1</option>
-                    
-                <option value="opt2">3</option>
-                    
-                <option value="opt2">5</option>
-            </select>
-
-            <br><br>
-
-            <button class="pushButton" id="CurriculumBtn">Se din Pensumliste</button>
-
-        </form>
-
+    <div class="page-header">
+        <h1>Vælg dit semester: </h1>
     </div>
+
+    <table class="table">
+        <thead>
+        <th>Curriculum ID</th>
+        <th>Skole</th>
+        <th>Udannelse</th>
+        <th>Semester</th>
+        </thead>
+        <tbody id="curriculumTableBody">
+
+        </tbody>
+    </table>
+
 </div>
+
+<!--<div id="clouds">-->
+    <!--<div class="cloud x1"></div>-->
+    <!--&lt;!&ndash; Time for multiple clouds to dance around &ndash;&gt;-->
+    <!--<div class="cloud x2"></div>-->
+    <!--<div class="cloud x3"></div>-->
+    <!--<div class="cloud x4"></div>-->
+    <!--<div class="cloud x5"></div>-->
+<!--</div>-->
+
+
+<!--<div class="container">-->
+
+    <!--<div id="options">-->
+
+        <!--<h1 id="overskrift">Vælg Skole, Uddannelse og Semester</h1>-->
+
+        <!--<form method="post">-->
+
+            <!--<select>-->
+                <!--<option value="" disabled selected>Vælg skole</option>-->
+                <!--<option value="opt1">CBS</option>-->
+            <!--</select>-->
+
+            <!--<br><br>-->
+
+            <!--<select>-->
+                <!--    -->
+                <!--<option value="" disabled selected style="display: none;">Vælg uddannelse</option>-->
+                <!--    -->
+                <!--<option id="haIt" value="opt1">HA(it)</option>-->
+                <!--    -->
+                <!--<option id="haMat" value="opt2">HA(nørd)</option>-->
+            <!--</select>-->
+
+            <!--<br><br>-->
+
+            <!--<select>-->
+                <!--    -->
+                <!--<option value="" disabled selected style="display: none;">Vælg semester</option>-->
+                <!--    -->
+                <!--<option value="opt1">1</option>-->
+                <!--    -->
+                <!--<option value="opt2">3</option>-->
+                <!--    -->
+                <!--<option value="opt2">5</option>-->
+            <!--</select>-->
+
+            <!--<br><br>-->
+
+            <!--<button class="pushButton" id="CurriculumBtn">Se din Pensumliste</button>-->
+
+        <!--</form>-->
+
+    <!--</div>-->
+<!--</div>-->
 
 <script type="text/javascript" src="lib/js/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="lib/js/bootstrap.js"></script>
 <script type="text/javascript" src="js/sdk.js"></script>
 <script type="text/javascript" src="js/User.page.js"></script>
-<script type="text/javascript" src="lib/js/bootstrap.js"></script>
 
 
 </body>
