@@ -85,9 +85,11 @@ var SDK = {
             SDK.request({method: "PUT", url: "/user/" + userID, data: data}, cb);
         },
         delete: function (cb) {
-
             var userID = JSON.parse(sessionStorage.getItem("user")).userID;
             SDK.request({method: "DELETE", url: "/user/" + userID}, cb);
+
+            sessionStorage.removeItem("token");
+            sessionStorage.removeItem("user");
         }
     },
 

@@ -40,7 +40,7 @@ $(document).ready(function () {
         });
     }
 
-    function semesterBooks(test, data) {
+    function semesterBooks(failHandler, data) {
 
         var booksDecrypted = encryptDecrypt(data);
 
@@ -54,7 +54,7 @@ $(document).ready(function () {
         books.forEach(function (book) {
 
             $booksTableBody.append(
-                "<tr id='test'>" +
+                "<tr>" +
                 "<td>" + book.title + "</td>" +
                 "<td>" + book.author + "</td>" +
                 "<td>" + book.publisher + "</td>" +

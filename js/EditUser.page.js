@@ -36,11 +36,20 @@ $(document).ready(function() {
 
     });
 
-    $('#deleteUserButton').on("click", function() {
-        SDK.User.delete(function() {
-            if (err) throw err;
-            alert("din bruger blev slettet");
-        });
+    $('#deleteUserButton').on("click", function(event) {
+        event.preventDefault();
+
+        var userDelete = window.confirm("Vil du slette din bruger?");
+
+        if (userDelete) {
+            SDK.User.delete(function() {
+                // if (err) throw err;
+                window.location.href = "Login.html";
+                alert("din bruger blev slettet");
+            });
+        } else {
+         console.log("User not deleted.");
+        }
 
     });
 
