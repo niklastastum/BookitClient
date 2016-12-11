@@ -158,6 +158,20 @@ p {
     background-color: #d44179;
 }
 
+/* LOGO */
+
+.loginLogo {
+    text-align: center;
+    margin: -380px 0 0 520px;
+    position: absolute;
+    padding: 10px;
+}
+
+.loginLogo img {
+    display: block;
+    margin: auto;
+}
+
 /* CHANGE */
 
 .buttons button {
