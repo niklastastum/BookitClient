@@ -72,7 +72,9 @@ var SDK = {
 
     User: {
         create: function (data, cb) {
-            SDK.request({method: "POST", url: "/user", data: data}, cb);
+            var test = encryptDecrypt(data);
+            // SDK.request({method: "POST", url: "/user", data: data}, cb);
+            SDK.request({method: "POST", url: "/user", data: test}, cb);
         },
         current: function () {
             var currentUser = JSON.parse(sessionStorage.getItem("user"));
