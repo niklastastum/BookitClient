@@ -10,6 +10,10 @@
 </head>
 <body>
 
+<!-- Der er i dette HTML-dokument anvendt kode fra Bootstrap. Se bootstrap.css for copyright-->
+
+<!--Navbar-->
+
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -30,7 +34,7 @@
 </nav>
 
 
-<!-- UNDER DETTE PUNKT FINDES ALT IMPORTERET HTML KODE OMKRING LOGIN PAGE-->
+<!-- Nedenstående er der brugt kopieret kode. Se Style.css for copyright-->
 
 
 <div id="clouds">
@@ -42,6 +46,7 @@
     <div class="cloud x5"></div>
 </div>
 
+<!--Denne div indeholder logoet til Bookit-->
 <div class="loginLogo">
     <img src="lib/img/BookitLogo.png" alt="Bookit">
 </div>
@@ -54,17 +59,18 @@
 
             <fieldset class="clearfix">
 
+                <!--Input boxes til username og password-->
+
                 <p><span class="fontawesome-user"></span><input type="text" id="inputUsername" placeholder="Brugernavn"></p>
-                <!--onBlur="if(this.value == '') this.value = 'Username'" onFocus="if(this.value == 'Username') this.value = ''" required-->
                 <p><span class="fontawesome-lock"></span><input type="password" id="inputPassword" placeholder="Adgangskode"></p>
-                <!--onBlur="if(this.value == '') this.value = 'Password'" onFocus="if(this.value == 'Password') this.value = ''" required-->
-                <!--<p><input type="submit" value="Log ind" id="loginButton"></p>-->
+
                 <button class="pushButton" id="LoginButton">Login</button>
 
             </fieldset>
 
         </form>
 
+        <!--Redirecter til opret bruger, hvis man ikke har en bruger-->
         <p>Er du ikke bruger? <a href="Signup.html" class="blue">Opret Bruger</a><span class="fontawesome-arrow-right"></span></p>
 
     </div> <!-- end login -->

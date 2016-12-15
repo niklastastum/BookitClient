@@ -1,6 +1,9 @@
 /**
  * Created by Tastum on 10/11/2016.
  */
+
+//Det er her i SDK, hvor alle metoder, der skal snakke med databasen eller bruges igennem flere sider ligger.
+// Det meste af nedenstående kode tager udgangspunkt i Jesper Bruun Hansen's kode på Github.
 var SDK = {
 
     //serverens adresse
@@ -37,8 +40,6 @@ var SDK = {
     User: {
         //Opretter bruger
         create: function (data, cb) {
-            // var data = encryptDecrypt(data);
-            // SDK.request({method: "POST", url: "/user", data: data}, cb);
             SDK.request({method: "POST", url: "/user", data: data}, cb);
         },
         //Sætter aktuel bruger ved at gøre brug af user-objectet i sessionStorage
@@ -128,3 +129,5 @@ $("#logoutClick").on("click", function () {
             SDK.logOut();
             window.location.href = "Login.html";
 });
+
+//Dette JavaScript dokument tager udgangspunkt i Jesper Bruun Hansens kode fra Github: https://github.com/Distribuerede-Systemer-2016/javascript-client/blob/master/js/sdk.js

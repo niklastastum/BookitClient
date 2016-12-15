@@ -20,6 +20,7 @@ $(document).ready(function() {
     //Metoden til at ændre brugeren, der bliver kørt på klik af knappen
     $('#editUserButton').on("click", function() {
 
+        //Sætter de ændrede værdier i et user objekt.
         var user = {
             firstName: $('#firstName').val(),
             lastName: $('#lastName').val(),
