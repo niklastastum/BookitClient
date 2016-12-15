@@ -13,6 +13,8 @@ $(document).ready(function () {
         var books = JSON.parse(decrypted);
 
         var $booksTableBody = $('#booksTableBody');
+
+        //Nedenstående funktion indsætter hver bog
         books.forEach(function (book, i) {
 
             $booksTableBody.append(
